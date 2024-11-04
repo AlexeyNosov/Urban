@@ -3,6 +3,9 @@ class house:
         self.name = name
         self.number_of_flours = int(number_of_flours)
     def go_to(self, flour):
+        if flour <= 0 :
+            print (f"В ЖК {self.name} нет подвальных этажей")
+            return
         if flour > self.number_of_flours:
             print (f"В ЖK {self.name} нет такого этажа ({flour}), а всего {self.number_of_flours}")
         else:
@@ -22,3 +25,5 @@ aist.go_to(40)
 aist.go_to(5)
 stolica.go_to(60)
 stolica.go_to(7)
+stolica.go_to(-5)
+aist.go_to(0)
